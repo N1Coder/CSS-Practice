@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Hover</title>
+    <style>
+        *{
+            font-family: monospace;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #333;
+        }
+        a{
+            position: relative;
+            display: inline-block;
+            padding: 30px 70px;
+            /* background: lime; */
+            font-size: 25px;
+            text-decoration: none;
+            color: #fff;
+            transition: 0.5s;
+        }
+        a:hover{
+            background: crimson;
+            transition: 1s ease-in-out;
+        }
+        span{
+            display: block;
+            background: crimson;
+            position: absolute;
+        }
+        span:nth-child(1){
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 0.2rem;
+            transform: scaleY(0);
+            transition: 0.5s;
+            transform-origin: bottom;
+        }
+        a:hover span:nth-child(1){
+            height: 100%;
+            width: 0.2rem;
+            transform: scaleY(1);
+            transform-origin: bottom;
+        }
+        span:nth-child(2){
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 0.2rem;
+            transform: scaleY(0);
+            transition: 0.5s;
+            transform-origin: top;
+        }
+        a:hover span:nth-child(2){
+            height: 100%;
+            width: 0.2rem;
+            transform: scaleY(1);
+            transform-origin: top;
+        }
+        span:nth-child(3){
+            top: 0;
+            right: 0;
+            height: 0.2rem;
+            width: 100%;
+            transform: scaleX(0);
+            transition: 0.5s;
+            transform-origin: left;
+        }
+        a:hover span:nth-child(3){
+            height: 0.2rem;
+            width: 100%;
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        span:nth-child(4){
+            bottom: 0;
+            right: 0;
+            height: 0.2rem;
+            width: 100%;
+            transform: scaleX(0);
+            transition: 0.5s;
+            transform-origin: right;
+        }
+        a:hover span:nth-child(4){
+            height: 0.2rem;
+            width: 100%;
+            transform: scaleX(1);
+            transform-origin: right;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Klik Ini
+    </a>
+</body>
+</html>
