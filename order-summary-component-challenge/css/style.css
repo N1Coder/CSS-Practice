@@ -1,139 +1,137 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
-:root{
-    --primary: hsl(225, 100%, 94%);
-    --primary-blue: hsl(245, 75%, 52%);
-    --neutral: hsl(225, 100%, 98%);
-    --neutral-1: hsl(224, 23%, 55%);
-    --neutral-2: hsl(223, 47%, 23%);
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+:root {
+  --primary: hsl(225, 100%, 94%);
+  --primary-blue: hsl(245, 75%, 52%);
+  --neutral: hsl(225, 100%, 98%);
+  --neutral-1: hsl(224, 23%, 55%);
+  --neutral-2: hsl(223, 47%, 23%);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-    font-family: 'Red Hat Display', sans-serif;
-    background: linear-gradient(to bottom, var(--primary) 50%, var(--neutral) 50%);
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: var(--primary) no-repeat top/100%;
+  background-image: url("../images/pattern-background-desktop.svg");
+
+  font-family: "Red Hat Display", sans-serif;
 }
 
-.container{
-    position: relative;
-    border-radius: 20px;
-    max-width: 450px;
-    height: auto;
-    transform-origin: center;
-    background: #fff;
-    box-shadow: 0 20px 20px rgba(114, 128, 167, .3);
+.container {
+  position: relative;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  transform-origin: center;
+  background: #fff;
+  box-shadow: 0 20px 20px rgba(114, 128, 167, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.container .bg{
-    position: relative;
-    height: 220px;
-    width: 100%;
+.container .bg {
+  position: relative;
+  height: 220px;
+  width: 100%;
 }
 
-.container .bg svg{
-    position: absolute;
-    width: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+section {
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
 }
 
-section{
-    position: relative;
-    width: 100%;
-    padding: 2rem;
-    text-align: center;
+section h2 {
+  font-weight: 900;
+  color: var(--neutral-2);
+  font-size: 1.7rem;
 }
 
-section h2{
-    font-weight: 900;
-    color: var(--neutral-2);
-    font-size: 1.7rem;
+section p {
+  padding: 1rem 2rem;
+  color: var(--neutral-1);
 }
 
-section p{
-    padding: 1rem 2rem;
-    color: var(--neutral-1);
+section .plan-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: var(--neutral);
 }
 
-section .plan-box{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 1.5rem;
-    border-radius: 10px;
-    background: var(--neutral);
+section .plan-box h3 {
+  margin-left: 1.1rem;
+  text-align: left;
+  color: var(--neutral-2);
 }
 
-section .plan-box h3{
-    margin-left: 1.1rem;
-    text-align: left;
-    color: var(--neutral-2);
+section .plan-box h3 span {
+  font-size: 1rem;
+  color: var(--neutral-1);
 }
 
-section .plan-box h3 span{
-    font-size: 1rem;
-    color: var(--neutral-1);
+section .plan-box a {
+  margin-left: auto;
+  font-weight: 700;
+  color: var(--primary-blue);
+  transform-origin: left;
 }
 
-section .plan-box a{
-    margin-left: auto;
-    font-weight: 700;
-    color: var(--primary-blue);
-    transform-origin: left;
+section .plan-box a:hover {
+  color: hsl(245, 75%, 75%);
+  text-decoration: none;
+  transition: 200ms;
 }
 
-section .plan-box a:hover{
-    color: hsl(245, 75%, 75%);
-    text-decoration: none;
-    transition: 200ms;
+section .btn-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-section .btn-list{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+section .btn-list .btn {
+  padding: 1rem;
+  color: var(--neutral-1);
+  font-weight: 900;
+  text-decoration: none;
 }
 
-section .btn-list .btn{
-    padding: 1rem;
-    color: var(--neutral-1);
-    font-weight: 900;
-    text-decoration: none;
+section .btn-list .btn-primary {
+  background: var(--primary-blue);
+  color: var(--primary);
+  font-weight: 900;
+  box-shadow: 0 25px 20px rgba(114, 128, 167, 0.3);
+  margin-top: 2rem;
+  transition: 0.3s;
+  border-radius: 5px;
 }
 
-section .btn-list .btn-primary{
-    background: var(--primary-blue);
-    color: var(--primary);
-    font-weight: 900;
-    border-radius: 10px;
-    box-shadow: 0 25px 20px rgba(114, 128, 167, .3);
-    margin-top: 2rem;
+section .btn-list .btn-primary:hover {
+  background: hsl(245, 75%, 62%);
 }
 
-section .btn-list .btn-primary:hover{
-    background: hsl(245, 75%, 62%);
-    transition: 200ms;
+section .btn-list .btn-cancel {
+  margin-top: 1.5rem;
 }
 
-section .btn-list .btn-cancel{
-    margin-top: 1.5rem;
+section .btn-list .btn-cancel:hover {
+  color: hsl(224, 23%, 20%);
+  transition: 100ms;
 }
 
-section .btn-list .btn-cancel:hover{
-    color: hsl(224, 23%, 20%);
-    transition: 100ms;
-}
-
-@media (max-width: 576px){
-    .container{
-        overflow: hidden;
-        transform: scale(.85);
-    }
+@media (max-width: 576px) {
+  .container {
+    overflow: hidden;
+    transform: scale(0.85);
+  }
 }
