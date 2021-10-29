@@ -96,6 +96,7 @@ body{
         flex-direction: column-reverse;
         max-width: 400px;
         min-height: 800px;
+        transform: scale(0.85);
     }
 
     .container .left-content{
@@ -119,7 +120,7 @@ body{
         justify-content: space-between;
         align-items: center;
         font-family: 'Lexend Deca', sans-serif;
-        margin-top: 2rem;
+        margin: 2rem 0;
         width: 100%;
         flex-direction: column;
     }
