@@ -68,6 +68,7 @@ section .main-content{
 section .main-content .column{
     display: flex;
     flex-direction: column;
+    gap: 2rem;
 }
 
 section .main-content .card, .column .card{
