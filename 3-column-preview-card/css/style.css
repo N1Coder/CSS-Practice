@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root{
+    font-size: 15px;
+    
+    /* Colors style */
+    --card-primary: hsl(31, 77%, 52%);
+    --card-primary-2: hsl(184, 100%, 22%);
+    --card-primary-3: hsl(179, 100%, 13%);
+    --heading: hsl(0, 0%, 95%);
+    --paragraph: hsla(0, 0%, 100%, 0.75);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+section{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 6rem 2rem;
+}
+
+section .card{
+    height: 470px;
+    width: 100%;
+    padding: 4rem;
+}
+
+section .sedans{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: var(--card-primary);
+}
+
+section .suvs{
+    background: var(--card-primary-2);
+}
+
+section .luxury{
+    background: var(--card-primary-3);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+section .card .content h2{
+    color: var(--heading);
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.8rem;
+    margin: 1.8rem 0;
+}
+
+section .card .content p{
+    color: var(--paragraph);
+    line-height: 1.8rem;
+}
+
+section .card a{
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: var(--heading);
+    border-radius: 100px;
+    text-decoration: none;
+    transition: background 200ms;
+}
+
+section .card a:hover{
+    background: none;
+    border: 3px solid var(--heading);
+    color: var(--heading);
+}
+
+section .sedans a{
+    color: var(--card-primary);
+}
+
+section .suvs a{
+    color: var(--card-primary-2);
+}
+
+section .luxury a{
+    color: var(--card-primary-3);
+}
+
+@media (min-width: 576px){
+    section .card {
+        height: 400px;
+    }
+}
+
+@media (min-width: 992px){
+    section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    section .sedans{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+
+    section .luxury{
+        background: var(--card-primary-3);
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    section .card{
+        padding: 3rem;
+        height: 500px;
+        max-width: 310px;
+    }
+
+    section .card a{
+        margin-top: 5rem;
+    }
+}
