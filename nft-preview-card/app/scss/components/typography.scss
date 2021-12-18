@@ -1,0 +1,15 @@
+@use '../util' as *;
+@use '../global' as *;
+
+.card .content{
+    h1{
+        font-size: rem(24);
+        margin: 0.8em 0;
+    }
+
+    p{
+        font-size: rem(18);
+        color: var(--primary-blue);
+        font-weight: 300;
+    }
+}
