@@ -15,12 +15,56 @@
   <style>
     .attribution { position: absolute; bottom: 0; font-size: 11px; text-align: center; }
     .attribution a { color: hsl(0, 0%, 100%); }
+
+    /* Active state style goes here */
+    .card .image{
+      position: relative;
+      height: 302px;
+      overflow: hidden;
+      border-radius: 0.9375rem;
+    }
+    
+    .card .image .active{
+      position: absolute;
+      background: none;
+      inset: 0;
+      z-index: 99;
+      transition: 200ms;
+      cursor: pointer;
+    }
+    
+    .card .image .active img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: 200ms;
+    }
+    
+    .card .image .active:hover{
+      background: hsla(178, 100%, 50%, .4);
+    }
+
+    .card .image .active:hover img{
+      opacity: 1;
+    }
+
+    h1:hover, 
+    .footer:hover{
+      cursor: pointer;
+      color: var(--primary-cyan);
+    }
   </style>
 </head>
 <body>
 
   <div class="card">
     <div class="image">
+      <div class="active">
+        <img src="images/icon-view.svg">
+      </div>
+
       <img src="images/image-equilibrium.jpg" alt="Equilibrium">
     </div>
 
