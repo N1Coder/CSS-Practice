@@ -1,0 +1,46 @@
+@use '../util' as *;
+@use '../global' as *;
+
+.card-grid{
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2em 3em;
+    border-radius: rem(15);
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+
+    img{
+        border-radius: 50%;
+        border: 1px solid #FFF;
+        max-width: rem(40);
+    }
+}
+
+// Card color bg and image
+.card-grid-violet{
+    background: var(--bg-violet);
+}
+
+.bg-pattern{
+    background-image: url('../../../images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: 95% 0;
+}
+
+.card-grid-grayish{
+    background: var(--bg-grayish);
+}
+
+.card-grid-blackish{
+    background: var(--bg-blackish);
+}
+
+.card-grid-white{
+    background: var(--bg-white);
+    box-shadow: 10px 35px 20px rgba(0,0,0,0.1);
+}

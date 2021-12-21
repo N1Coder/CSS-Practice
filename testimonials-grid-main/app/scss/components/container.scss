@@ -1,0 +1,48 @@
+@use 'util' as *;
+
+.container-grid{
+    position: relative;
+    max-width: 90%;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas: 
+    'violetGrid'
+    'grayishGrid'
+    'whiteSmoll'
+    'blackishGrid'
+    'whiteRow';
+    grid-auto-columns: 1fr;
+
+    @include breakpoint(medium){
+        grid-template-areas: 
+        'violetGrid violetGrid whiteRow whiteRow'
+        'blackishGrid blackishGrid grayishGrid grayishGrid'
+        'whiteSmoll whiteSmoll whiteSmoll whiteSmoll';
+    }
+
+    @include breakpoint(large){
+        grid-template-areas: 
+        'violetGrid violetGrid grayishGrid whiteRow'
+        'whiteSmoll blackishGrid blackishGrid whiteRow';
+    }
+
+    .violet-area{
+        grid-area: violetGrid;
+    }
+
+    .grayish-area{
+        grid-area: grayishGrid;
+    }
+    
+    .blackish-area{
+        grid-area: blackishGrid;
+    }
+
+    .white-row-area{
+        grid-area: whiteRow;
+    }
+
+    .white-small-area{
+        grid-area: whiteSmoll;
+    }
+}

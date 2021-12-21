@@ -1,0 +1,64 @@
+@use '../util' as *;
+@use '../global' as *;
+
+.card-grid{
+
+    // Set The Font Size 
+    h1{
+        font-size: rem(24);
+
+        @include breakpoint(medium){
+            font-size: rem(28);
+        }
+    }
+
+    p{
+        line-height: rem(25);
+        font-size: rem(16);
+
+        @include breakpoint(medium){
+            font-size: rem(18);
+            line-height: rem(30);
+        }
+    }
+
+    // Heading And Content From The Card 
+    h1.head-card{
+        color: var(--head-text);
+        margin: 1.5rem 0;
+    }
+
+    p.content-card{
+        color: var(--content-text);
+    }
+
+    h1.head-card-light{
+        color: var(--head-text-light);    
+    }
+
+    p.content-card-light{
+        color: var(--content-text-light);
+    }
+
+    // Profile Names Styling
+    span{
+        margin-left: 1.5rem;
+        display: block;
+
+        &.main{
+            color: var(--main-profile);
+        }
+
+        &.sub{
+            color: var(--sub-profile);
+        }
+
+        &.main-light{
+            color: var(--main-profile-light);
+        }
+
+        &.sub-light{
+            color: var(--sub-profile-light);
+        }
+    }
+}
